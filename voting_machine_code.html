@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voting Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #0f74cc;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        h2 {
+            color: #555;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        button_head_boy, button_head_girl, button_deputy_head_boy, button_deputy_head_girl, button_sports_minister, button_cultural_minister {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+  <title>Voting Page</title>
+  <script>
+    // Function to store the selected values in local storage
+    function castVote(category, member) {
+      localStorage.setItem(category, member);
+      alert("Vote cast successfully!");
+    }
+    function giveFullName(name, full_name) {
+      localStorage.setItem(name, full_name);
+      alert("Name Updated Successfully!");
+    }
+  </script>
+</head>
+<body>
+  <h1>Vote for Members</h1>
+  <h2>Head Boy</h2>
+  <select id="headBoySelect">
+    <option value="">Select a member</option>
+    <option value="Candidate1">Candidate 1</option>
+    <option value="Candidate2">Candidate 2</option>
+    <option value="Candidate3">Candidate 3</option>
+  </select>
+  <button onclick="castVote('HeadBoy', document.getElementById('headBoySelect').value)">Vote</button>
+
+  <h2>Head Girl</h2>
+  <select id="headGirlSelect">
+    <option value="">Select a member</option>
+    <option value="Candidate1">Candidate 1</option>
+    <option value="Candidate2">Candidate 2</option>
+    <option value="Candidate3">Candidate 3</option>
+  </select>
+  <button onclick="castVote('HeadGirl', document.getElementById('headGirlSelect').value)">Vote</button>
+
+  <h2>Deputy Head Boy</h2>
+  <select id="deputyHeadBoySelect">
+    <option value="">Select a member</option>
+    <option value="Candidate1">Candidate 1</option>
+    <option value="Candidate2">Candidate 2</option>
+    <option value="Candidate3">Candidate 3</option>
+  </select>
+  <button onclick="castVote('DeputyHeadBoy', document.getElementById('deputyHeadBoySelect').value)">Vote</button>
+
+  <h2>Deputy Head Girl</h2>
+  <select id="deputyHeadGirlSelect">
+    <option value="">Select a member</option>
+    <option value="Candidate1">Candidate 1</option>
+    <option value="Candidate2">Candidate 2</option>
+    <option value="Candidate3">Candidate 3</option>
+  </select>
+  <button onclick="castVote('DeputyHeadGirl', document.getElementById('deputyHeadGirlSelect').value)">Vote</button>
+
+  <h2>Cultural Minister</h2>
+  <select id="culturalMinisterSelect">
+    <option value="">Select a member</option>
+    <option value="Candidate1">Candidate 1</option>
+    <option value="Candidate2">Candidate 2</option>
+    <option value="Candidate3">Candidate 3</option>
+  </select>
+  <button onclick="castVote('CulturalMinister', document.getElementById('culturalMinisterSelect').value)">Vote</button>
+
+  <h2>Sports Minister</h2>
+  <select id="sportsMinisterSelect">
+    <option value="">Select a member</option>
+    <option value="Candidate1">Candidate 1</option>
+    <option value="Candidate2">Candidate 2</option>
+    <option value="Candidate3">Candidate 3</option>
+  </select>
+  <button onclick="castVote('SportsMinister', document.getElementById('sportsMinisterSelect').value)">Vote</button>
+
+</body>
+</html>
